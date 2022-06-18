@@ -4,7 +4,11 @@ if not status_ok then
 end
 
 githubTheme.setup({
-  theme_style = "dark",
+  theme_style = "dimmed",
   sidebars = {"qf", "vista_kind", "terminal", "packer"},
   colors = {hint = "orange", error = "#ff0000"},
+	comment_style = "NONE",
+  keyword_style = "NONE",
+  function_style = "NONE",
+  variable_style = "NONE"
 })
