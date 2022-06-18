@@ -5,3 +5,13 @@ if not status_ok then
 end
 
 lspLines.register_lsp_virtual_lines()
+local isEnabled = true
+
+function _TOGGLE_VIRTUAL_LINES()
+	if isEnabled == true then
+		isEnabled = false
+	else
+		isEnabled = true
+	end
+	vim.diagnostic.config({ virtual_lines = isEnabled })
+end
