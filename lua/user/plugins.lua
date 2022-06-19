@@ -89,6 +89,7 @@ return packer.startup(function(use)
     "nvim-treesitter/nvim-treesitter",
     commit = "518e27589c0463af15463c9d675c65e464efc2fe",
   }
+	use { "nvim-treesitter/playground" } -- playground for debugging syntax highlighting
 
   -- Git
   use { "lewis6991/gitsigns.nvim", commit = "c18e016864c92ecf9775abea1baaa161c28082c3" }
