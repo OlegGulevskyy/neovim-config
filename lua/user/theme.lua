@@ -33,3 +33,8 @@ vim.cmd[[
 vim.cmd[[
 	highlight typescriptTSVariable guifg=#9ec9fe
 ]]
+
+-- Separator line between buffer lines, was hard to find
+vim.cmd[[
+	highlight BufferLineIndicatorSelected guifg=#FF5733
+]]
