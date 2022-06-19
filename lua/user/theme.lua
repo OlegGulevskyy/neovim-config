@@ -29,3 +29,7 @@ vim.cmd[[
 vim.cmd[[
 	highlight TSParameter guifg=#ffac70
 ]]
+
+vim.cmd[[
+	highlight typescriptTSVariable guifg=#9ec9fe
+]]
