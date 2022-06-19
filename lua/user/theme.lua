@@ -12,3 +12,20 @@ githubTheme.setup({
   function_style = "NONE",
   variable_style = "NONE"
 })
+
+-- Modifications of githubTheme
+vim.cmd[[
+	highlight tsxTSTagAttribute guifg=#b392f0
+]]
+
+vim.cmd[[
+	highlight TSFunction guifg=#b392f0
+]]
+
+vim.cmd[[
+	highlight TSString guifg=#9ec9fe
+]]
+
+vim.cmd[[
+	highlight TSParameter guifg=#ffac70
+]]
