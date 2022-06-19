@@ -16,25 +16,9 @@ githubTheme.setup({
 -- Modifications of githubTheme
 vim.cmd[[
 	highlight tsxTSTagAttribute guifg=#b392f0
-]]
-
-vim.cmd[[
-	highlight TSFunction guifg=#b392f0
-]]
-
-vim.cmd[[
-	highlight TSString guifg=#9ec9fe
-]]
-
-vim.cmd[[
-	highlight TSParameter guifg=#ffac70
-]]
-
-vim.cmd[[
 	highlight typescriptTSVariable guifg=#9ec9fe
-]]
-
--- Separator line between buffer lines, was hard to find
-vim.cmd[[
+	highlight TSFunction guifg=#b392f0
+	highlight TSString guifg=#9ec9fe
+	highlight TSParameter guifg=#ffac70
 	highlight BufferLineIndicatorSelected guifg=#FF5733
 ]]
