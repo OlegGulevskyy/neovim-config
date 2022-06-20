@@ -21,4 +21,5 @@ vim.cmd[[
 	highlight TSString guifg=#9ec9fe
 	highlight TSParameter guifg=#ffac70
 	highlight BufferLineIndicatorSelected guifg=#FF5733
+	highlight TSComment guifg=#6c737c
 ]]
