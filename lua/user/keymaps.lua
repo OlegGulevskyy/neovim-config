@@ -71,3 +71,7 @@ keymap("x", "<leader>/", '<ESC><CMD>lua require("Comment.api").toggle_linewise_o
 
 -- Diagnostics
 keymap("n", "<leader>dt", "<cmd>lua _TOGGLE_VIRTUAL_LINES()<CR>", opts)
+keymap("n", "<leader>dm", "<cmd>lua vim.diagnostic.setqflist()<CR>", opts)
+
+-- GitSigns
+keymap("n", "<leader>hl", ":Gitsigns setqflist<CR>", opts)
