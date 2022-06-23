@@ -1,25 +1,22 @@
-local status_ok, githubTheme = pcall(require, "github-theme")
+local status_ok, catppuccin = pcall(require, "catppuccin")
 if not status_ok then
-  return
+	return
 end
 
-githubTheme.setup({
-  theme_style = "dimmed",
-  sidebars = {"qf", "vista_kind", "terminal", "packer"},
-  colors = {hint = "orange", error = "#ff0000"},
-	comment_style = "NONE",
-  keyword_style = "NONE",
-  function_style = "NONE",
-  variable_style = "NONE"
+catppuccin.setup({
+	integration = {
+		nvimtree = {
+			enabled = true,
+			show_root = false,
+			transparent_panel = false,
+		},
+		indent_blankline = {
+			enabled = true,
+			color_indent_levels = true,
+		},
+		gitsigns = true,
+	}
 })
 
--- Modifications of githubTheme
-vim.cmd[[
-	highlight tsxTSTagAttribute guifg=#b392f0
-	highlight typescriptTSVariable guifg=#9ec9fe
-	highlight TSFunction guifg=#b392f0
-	highlight TSString guifg=#9ec9fe
-	highlight TSParameter guifg=#ffac70
-	highlight BufferLineIndicatorSelected guifg=#FF5733
-	highlight TSComment guifg=#6c737c
-]]
+vim.g.catppuccin_flavour = "macchiato" -- latte, frappe, macchiato, mocha
+vim.cmd[[colorscheme catppuccin]]
