@@ -74,4 +74,5 @@ keymap("n", "<leader>dt", "<cmd>lua _TOGGLE_VIRTUAL_LINES()<CR>", opts)
 keymap("n", "<leader>dm", "<cmd>lua vim.diagnostic.setqflist()<CR>", opts)
 
 -- GitSigns
-keymap("n", "<leader>hl", ":Gitsigns setqflist<CR>", opts)
+keymap("n", "<leader>hm", ":Gitsigns setqflist<CR>", opts)
+keymap("n", "<leader>gb", ":Gitsigns blame_line<CR>", opts)
