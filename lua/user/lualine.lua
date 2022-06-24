@@ -3,7 +3,10 @@ if not status_ok then
   return
 end
 
-local navic = require("nvim-navic")
+local ok, navic = pcall(require, "nvim-navic")
+if not ok then
+	return
+end
 
 local hide_in_width = function()
   return vim.fn.winwidth(0) > 80
@@ -54,6 +57,11 @@ lualine.setup {
     lualine_b = {"branch"},
     lualine_c = { 
 			diagnostics,
+			{
+				'filename',
+				file_status = true, -- displays file status (readonly status, modified status)
+				path = 1 -- 0 = just filename, 1 = relative path, 2 = absolute path
+    	},
 			{
 				navic.get_location,
 				cond = navic.is_available,
