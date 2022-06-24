@@ -83,8 +83,14 @@ return packer.startup(function(use)
   -- LSP
   use { "neovim/nvim-lspconfig", commit = "148c99bd09b44cf3605151a06869f6b4d4c24455" } -- enable LSP
   use { "williamboman/nvim-lsp-installer", commit = "e9f13d7acaa60aff91c58b923002228668c8c9e6" } -- simple to use language server installer
-  use { "jose-elias-alvarez/null-ls.nvim", commit = "ff40739e5be6581899b43385997e39eecdbf9465" } -- for formatters and linters
-  use { "RRethy/vim-illuminate", commit = "c82e6d04f27a41d7fdcad9be0bce5bb59fcb78e5" }
+  use {
+		"jose-elias-alvarez/null-ls.nvim",
+		branch = "main"
+	} -- for formatters and linters
+  use {
+		"RRethy/vim-illuminate",
+		commit = "c82e6d04f27a41d7fdcad9be0bce5bb59fcb78e5"
+	}
 
   -- Telescope
   use { "nvim-telescope/telescope.nvim", commit = "d96eaa914aab6cfc4adccb34af421bdd496468b0" }
@@ -99,6 +105,19 @@ return packer.startup(function(use)
   -- Git
   use { "lewis6991/gitsigns.nvim", commit = "c18e016864c92ecf9775abea1baaa161c28082c3" }
 
+	use {
+    "SmiteshP/nvim-navic",
+    requires = "neovim/nvim-lspconfig"
+	}
+
+	use {
+		"SmiteshP/nvim-gps",
+		requires = "nvim-treesitter/nvim-treesitter",
+		module = "nvim-gps",
+		config = function()
+			require("nvim-gps").setup()
+		end,
+	}
   -- Automatically set up your configuration after cloning packer.nvim
   -- Put this at the end after all plugins
   if PACKER_BOOTSTRAP then

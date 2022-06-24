@@ -3,6 +3,8 @@ if not status_ok then
   return
 end
 
+local navic = require("nvim-navic")
+
 local hide_in_width = function()
   return vim.fn.winwidth(0) > 80
 end
@@ -50,7 +52,14 @@ lualine.setup {
   sections = {
     lualine_a = { "mode" },
     lualine_b = {"branch"},
-    lualine_c = { diagnostics },
+    lualine_c = { 
+			diagnostics,
+			{
+				navic.get_location,
+				cond = navic.is_available,
+				color = { fg = "#f3ca28" },
+			},
+		},
     lualine_x = { diff, spaces, "encoding", filetype },
     lualine_y = { location },
     lualine_z = { "progress" },

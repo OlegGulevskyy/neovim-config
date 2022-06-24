@@ -68,6 +68,11 @@ M.on_attach = function(client, bufnr)
   if not status_cmp_ok then
     return
   end
+	--
+	if client.server_capabilities.documentSymbolProvider then
+		local navic = require "nvim-navic"
+		navic.attach(client, bufnr)
+	end
 
   if client.name == "tsserver" then
     client.resolved_capabilities.document_formatting = false
@@ -86,7 +91,7 @@ M.on_attach = function(client, bufnr)
   if not status_ok then
     return
   end
-  illuminate.on_attach(client)
+  -- illuminate.on_attach(client)
 end
 
 return M
