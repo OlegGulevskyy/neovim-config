@@ -13,6 +13,7 @@ local servers = {
   "jsonls",
   "yamlls",
 	"gopls",
+	"svelte",
 }
 
 lsp_installer.setup()
