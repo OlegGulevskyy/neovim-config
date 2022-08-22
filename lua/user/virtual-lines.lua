@@ -4,7 +4,7 @@ if not status_ok then
   return
 end
 
-lspLines.register_lsp_virtual_lines()
+lspLines.setup()
 local isEnabled = true
 
 function _TOGGLE_VIRTUAL_LINES()
