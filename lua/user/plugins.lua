@@ -111,6 +111,11 @@ return packer.startup(function(use)
 	}
 
 	use {
+		"mg979/vim-visual-multi",
+		commit = "e23b98a8852255766e54bf7723a9d61fb5ab3143"
+	}
+
+	use {
 		"SmiteshP/nvim-gps",
 		requires = "nvim-treesitter/nvim-treesitter",
 		module = "nvim-gps",
