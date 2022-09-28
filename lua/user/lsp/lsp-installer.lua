@@ -14,6 +14,7 @@ local servers = {
   "yamlls",
 	"gopls",
 	"svelte",
+	"solargraph",
 }
 
 lsp_installer.setup()
