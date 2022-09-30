@@ -5,6 +5,12 @@ end
 
 local actions = require "telescope.actions"
 
+local pickers = {
+	current_buffer_fuzzy_find = {
+		sorting_strategy = 'ascending'
+	}
+}
+
 telescope.setup {
   defaults = {
 
@@ -12,6 +18,7 @@ telescope.setup {
     selection_caret = " ",
     path_display = { "smart" },
     file_ignore_patterns = { ".git/", "node_modules" },
+		layout_strategy = "vertical",
 
     mappings = {
       i = {
@@ -22,4 +29,5 @@ telescope.setup {
       },
     },
   },
+	pickers = pickers,
 }
