@@ -125,6 +125,10 @@ return packer.startup(function(use)
 		'folke/which-key.nvim'
 	}
 
+	use {
+		"ggandor/lightspeed.nvim"
+	}
+
 	-- local plguins
   -- Automatically set up your configuration after cloning packer.nvim
   -- Put this at the end after all plugins
