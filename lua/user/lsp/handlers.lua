@@ -91,6 +91,17 @@ M.on_attach = function(client, bufnr)
   if not status_ok then
     return
   end
+
+	illuminate.configure({
+
+		providers = {
+			'lsp',
+			'treesitter',
+			'regex',
+    },
+    -- delay: delay in milliseconds
+    delay = 100,
+	})
   -- illuminate.on_attach(client)
 end
 
