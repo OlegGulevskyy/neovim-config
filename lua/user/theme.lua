@@ -19,5 +19,12 @@ catppuccin.setup({
 })
 
 vim.g.catppuccin_flavour = "macchiato" -- latte, frappe, macchiato, mocha
+local colors = require("catppuccin.palettes").get_palette()
+
+catppuccin.setup({
+	custom_highlights = {
+		Comment = { fg = colors.flamingo }
+	}
+})
+
 catppuccin.load()
--- vim.cmd[[colorscheme catppuccin]]
