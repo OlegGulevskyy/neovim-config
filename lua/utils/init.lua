@@ -1,3 +1,5 @@
+require "utils.text"
+
 _G.dump = function(...)
   print(vim.inspect(...))
 end
