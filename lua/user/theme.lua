@@ -23,7 +23,7 @@ local colors = require("catppuccin.palettes").get_palette()
 
 catppuccin.setup({
 	custom_highlights = {
-		Comment = { fg = colors.flamingo }
+		Comment = { fg = "#8f96b5" }
 	}
 })
 
