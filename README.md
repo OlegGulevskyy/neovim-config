@@ -2,8 +2,6 @@
 
 > Why does this repo exist?
 
-# One
-
 This config attempts to provide a rock solid fully featured starting point for someone new to Neovim, or just tired of maintaining the basic IDE components of their config. 
 
 > What makes it "rock solid"?
