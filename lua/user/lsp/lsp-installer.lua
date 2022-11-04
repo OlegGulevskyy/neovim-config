@@ -15,6 +15,7 @@ local servers = {
 	"gopls",
 	"svelte",
 	"solargraph",
+	"vuels",
 }
 
 lsp_installer.setup()
