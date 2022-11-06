@@ -58,6 +58,8 @@ return packer.startup(function(use)
   use { "goolord/alpha-nvim" }
 	use { "https://git.sr.ht/~whynothugo/lsp_lines.nvim" }
 
+	use { 'fgheng/winbar.nvim' }
+
   -- Colorschemes
   use { "folke/tokyonight.nvim" }
   -- use { "lunarvim/darkplus.nvim" }
@@ -105,21 +107,6 @@ return packer.startup(function(use)
     "SmiteshP/nvim-navic",
     requires = "neovim/nvim-lspconfig"
 	}
-
-	-- SSH
-	use {
-  'chipsenkbeil/distant.nvim',
-  config = function()
-    require('distant').setup {
-      -- Applies Chip's personal settings to every machine you connect to
-      --
-      -- 1. Ensures that distant servers terminate with no connections
-      -- 2. Provides navigation bindings for remote directories
-      -- 3. Provides keybinding to jump into a remote file's parent directory
-      ['*'] = require('distant.settings').chip_default()
-    }
-  end
-}
 
 	use {
 		"mg979/vim-visual-multi"
