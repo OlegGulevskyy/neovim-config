@@ -16,6 +16,11 @@ local servers = {
 	"svelte",
 	"solargraph",
 	"vuels",
+	"tailwindcss",
+	"remark_ls",
+	"marksman",
+	"prosemd_lsp",
+	"zk",
 }
 
 lsp_installer.setup()
@@ -26,6 +31,8 @@ if not lspconfig_status_ok then
 end
 
 local opts = {}
+
+local GOPLS_ENV_TAG = ""
 
 for _, server in pairs(servers) do
   opts = {
@@ -42,6 +49,14 @@ for _, server in pairs(servers) do
     local pyright_opts = require "user.lsp.settings.pyright"
     opts = vim.tbl_deep_extend("force", pyright_opts, opts)
   end
+
+	if server == "gopls" then
+		opts.settings = {
+			gopls = {
+				env = {GOFLAGS="-tags=" .. GOPLS_ENV_TAG}
+			}
+		}
+	end
 
   lspconfig[server].setup(opts)
 end

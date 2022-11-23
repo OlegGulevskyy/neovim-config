@@ -5,14 +5,14 @@ require('winbar').setup({
     show_symbols = true,
 
     colors = {
-        path = '', -- You can customize colors like #c946fd
-        file_name = '',
-        symbols = '',
+        path = '#ffd43b', -- You can customize colors like #c946fd
+        file_name = '#ffd43b',
+        symbols = '#ffd43b',
     },
 
     icons = {
         file_icon_default = '',
-        seperator = '>',
+        seperator = '/',
         editor_state = '●',
         lock_icon = '',
     },

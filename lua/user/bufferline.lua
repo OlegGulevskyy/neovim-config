@@ -17,11 +17,9 @@ bufferline.setup {
 		},
 		separator_visible = {
 			fg = "#ffd43b",
-			--[[ bg = '<colour-value-here>' ]]
 		},
 		separator = {
 			fg = "#ffd43b",
-			--[[ bg = '<colour-value-here>' ]]
 		},
 
 	}
