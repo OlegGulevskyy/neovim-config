@@ -127,9 +127,10 @@ cmp.setup {
     completion = {
       border = { "╭", "─", "╮", "│", "╯", "─", "╰", "│" },
       winhighlight = "NormalFloat:Pmenu,NormalFloat:Pmenu,CursorLine:PmenuSel,Search:None",
+			autocomplete = false,
     },
   },
   experimental = {
-    ghost_text = true,
+    ghost_text = false,
   },
 }
