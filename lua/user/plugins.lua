@@ -69,6 +69,8 @@ return packer.startup(function(use)
 		as = "catppuccin"
 	})
 
+	use { "olivercederborg/poimandres.nvim" }
+
 	-- Github Copilot
 	use { "github/copilot.vim" }
 
