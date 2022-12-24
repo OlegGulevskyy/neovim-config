@@ -68,6 +68,7 @@ return packer.startup(function(use)
 		"catppuccin/nvim",
 		as = "catppuccin"
 	})
+	use { "EdenEast/nightfox.nvim" }
 
 	use { "olivercederborg/poimandres.nvim" }
 
