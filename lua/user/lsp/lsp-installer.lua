@@ -21,6 +21,7 @@ local servers = {
 	"marksman",
 	"prosemd_lsp",
 	"zk",
+	"jdtls",
 }
 
 lsp_installer.setup()
